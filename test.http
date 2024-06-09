@@ -1,0 +1,19 @@
+@url = http://127.0.0.1:8082/
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTc5NTkxNDEsInN1YiI6ImpvaG5AcmFtYm8uY29tIn0.0AYFDj4VfRSsyGikdJJp-kndE4UQHjuPShFQDqYXrKs
+
+### PUBLIC VIEW
+GET {{url}}public_view
+
+### SECRET VIEW
+GET {{url}}secret_view
+Authorization : Bearer {{token}}
+
+
+### POST TO GET TOKEN
+POST {{url}}get_token
+content-type: application/json
+
+{
+    "email": "john@rambo.com"
+}
+
